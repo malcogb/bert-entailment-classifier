@@ -57,6 +57,8 @@ Lancez le fichier `demo.py` pour ouvrir l’interface utilisateur afin de tester
 python demo.py
 ```
 
+Aperçu de l'interface : `bert-entailment-classifier\Images  captures d'écran\Interface gradio.png`
+
 ## Détails du modèle
 
 - Modèle utilisé : `bert-base-multilingual-cased`
@@ -77,8 +79,9 @@ Le fichier `train_6.csv` est utilisé comme dataset principal avec trois labels 
 ## Suivi des performances  et résultats
 
 Les métriques (accuracy, loss) sont suivies via [Weights & Biases](https://wandb.ai/).
+Courbes obtenues dans wandb :`bert-entailment-classifier\Images  captures d'écran\Interface gradio.png`
 
-Après 10 epochs : XX%
+Métriques après 10 epochs : `bert-entailment-classifier\Images  captures d'écran\Métriques après entraînement.png`
 
 ## Ce qui est fait :
  Entraînement du modèle
