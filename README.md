@@ -10,27 +10,48 @@ Ce projet implémente un modèle de classification d'entailment basé sur BERT.
 ├── model.py              # Définition du modèle BERTClassifier
 ├── demo.py               # Interface Gradio pour tester le modèle
 ├── requirements.txt      # Dépendances Python
+├── train_6.csv           # Le dataset d'entraînement
 ├── saved_model.pt        # Fichier pour sauvegarder les checkpoints
 └── README.md             # Ce fichier explique ce projet
 ```
 
-## Lancer l'entraînement
-
-Après avoir installé les dépendances :
+## Installation
 
 ```bash
-pip install -r requirements.txt
-```
+git clone https://github.com/malcogb/bert-entailment-classifier.git
+cd bert-entailment-classifier
 
-Puis exécutez :
+# Création d'un environnement virtuel
+python -m venv wandb_env
+wandb_env\Scripts\activate    # Sur Windows
+
+# Installation des dépendances
+transformers
+
+torch
+
+scikit-learn
+
+pandas
+
+wandb
+
+gradio
+
+Installe-les avec : pip install -r requirements.txt
+
+## Lancer l'entraînement
+Place le fichier train_6.csv dans le dossier racine.
+
+Exécutez :
 
 ```bash
 python train.py
 ```
 
-## Test via Gradio
+## Test via Gradio : Démo interactive
 
-Lancez le fichier `demo.py` pour ouvrir l’interface utilisateur :
+Lancez le fichier `demo.py` pour ouvrir l’interface utilisateur afin de tester le modèle entraîné via une interface Web
 
 ```bash
 python demo.py
@@ -45,16 +66,31 @@ python demo.py
 - Optimiseur : `Adam`
 - Loss : `CrossEntropyLoss`
 
-## Suivi des performances
-
-Les métriques (accuracy, loss) sont suivies via [Weights & Biases](https://wandb.ai/).
-
-## Données
+## Données : Correspondance des labels
 
 Le fichier `train_6.csv` est utilisé comme dataset principal avec trois labels :
 - 0 : entailment
 - 1 : contradiction
 - 2 : neutral
+
+
+## Suivi des performances  et résultats
+
+Les métriques (accuracy, loss) sont suivies via [Weights & Biases](https://wandb.ai/).
+
+Après 10 epochs : XX%
+
+## Ce qui est fait :
+ Entraînement du modèle
+
+ Interface Gradio
+
+ ## Ce qui reste à faire :
+
+ Optimisation hyperparamètres
+
+ Ajout de tests unitaires
+
 
 ## Auteur
 
