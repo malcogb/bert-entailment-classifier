@@ -2,17 +2,19 @@
 
 Ce projet implémente un modèle de classification d'entailment basé sur BERT.
 
-## Structure du projet
+## Structure du projet : `bert-entailment-classifier\Images  captures d'écran\Structure du projet.png`
 
 ```
 .
-├── train.py              # Script d'entraînement
-├── model.py              # Définition du modèle BERTClassifier
-├── demo.py               # Interface Gradio pour tester le modèle
-├── requirements.txt      # Dépendances Python
-├── train_6.csv           # Le dataset d'entraînement
-├── saved_model.pt        # Fichier pour sauvegarder les checkpoints
-└── README.md             # Ce fichier explique ce projet
+├── wandb
+├── train.py                # Script d'entraînement
+├── model.py                # Définition du modèle BERTClassifier
+├── demo.py                 # Interface Gradio pour tester le modèle
+├── requirements.txt        # Dépendances Python
+├── train_6.csv             # Le dataset d'entraînement
+├── saved_model.pt          # Fichier pour sauvegarder les checkpoints
+└── Images captures d'écran # Laptures d'écran
+├── README.md               # Ce fichier explique ce projet
 ```
 
 ## Installation
